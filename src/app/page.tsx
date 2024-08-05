@@ -1,6 +1,11 @@
 "use client"
 
-import {Tabs, Tab} from "@nextui-org/react";
+import About from "./components/about";
+import Intro from "./components/intro";
+import NavigationTab from "./components/navigationTab";
+import Projects from "./components/projects";
+import Skills from "./components/skills";
+
 
 export default function Home() {
 
@@ -12,19 +17,14 @@ export default function Home() {
     "none",
   ];
   return (
-    <div className="flex flex-col h-screen ">
+    <div className="flex flex-col dark">
       
       {/* Header */}
-      <div className="flex flex-wrap gap-4 justify-center pt-6">
-        <Tabs radius="full" aria-label="Tabs radius" color="default">
-          <Tab key="home" title="Home"/>
-          <Tab key="about" title="About"/>
-          <Tab key="projects" title="Projects"/>
-          <Tab key="skills" title="Skills"/>
-          <Tab key="experience" title="Experience"/>
-          <Tab key="contact" title="Contact"/>
-        </Tabs>
-    </div>
+      <NavigationTab />
+      <Intro />
+      <About />
+      <Projects />
+      <Skills />
     </div>
   );
 }
