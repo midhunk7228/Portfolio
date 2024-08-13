@@ -17,7 +17,7 @@ export default function Home() {
     "none",
   ];
   return (
-    <div className="flex flex-col dark">
+    <div className="flex flex-col">
       
       {/* Header */}
       <NavigationTab />

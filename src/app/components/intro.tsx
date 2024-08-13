@@ -9,12 +9,12 @@ const Intro = () => {
         isBordered
         color="default"
         className="w-24 h-24"
-        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+        src="https://media.licdn.com/dms/image/D5603AQEj95Zc5iYckA/profile-displayphoto-shrink_800_800/0/1712234035584?e=1728518400&v=beta&t=CyV-t_XzP10262lLY3hEtlDON2RMQKMv91dGo4u8_mA"
       />
-      <h1 className="text-4xl font-bold">Hello, I&apos;m John Doe</h1>
+      <h1 className="text-4xl font-bold">Hello, I&apos;m Midhun</h1>
       <div className="flex items-center justify-center w-2/3">
         <p className="text-lg text-center">
-          I&apos;m a full-stack developer with 8 years of experience. I enjoy
+          I&apos;m a full-stack developer with 3 years of experience. I enjoy
           building sites & apps. My focus is React (Next.js).
         </p>
       </div>
@@ -27,10 +27,10 @@ const Intro = () => {
         >
           Download CV <MdFileDownload />
         </Button>
-        <Button isIconOnly radius="full" variant="faded" aria-label="LinkedIn">
+        <Button isIconOnly radius="full" variant="faded" aria-label="LinkedIn" onClick={() => window.open("https://www.linkedin.com/in/midhun-k-030131208/")}>
           <FaLinkedin />
         </Button>
-        <Button isIconOnly radius="full" variant="faded" aria-label="Github">
+        <Button isIconOnly radius="full" variant="faded" aria-label="Github" onClick={() => window.open("https://github.com/midhunk7228")}>
           <FaGithub />
         </Button>
       </div>

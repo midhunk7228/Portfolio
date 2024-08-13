@@ -1,24 +1,38 @@
 import { Tabs, Tab } from '@nextui-org/react'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+// import { Route, Routes, useLocation } from 'react-router-dom'
 const NavigationTab = () => {
-      
+  // const { hash } = router;
+  const [navigatedTab, setNavigatedTab] = useState("");
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      console.log("Hash value:", window.location.hash); // Logs the hash value
+      setNavigatedTab(window.location.hash);
+    };
+
+    handleHashChange(); // Log the initial hash value
+
+    // Optionally, listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // return () => {
+    //   window.removeEventListener('hashchange', handleHashChange);
+    // };
+  }, []);
+  
+  console.log("navigatedTab", navigatedTab);
+  
   return (
-    <div className="flex flex-wrap gap-4 justify-center pt-8">
-      <Tabs
-        radius="full"
-        aria-label="Tabs sizes"
-        color="default"
-        className="fixed z-50"
-        // selectedKey={hashedValue}
-      >
-        <Tab key="#home" title="Home" href="#home">
-          <div className=''></div>
-        </Tab>
-        <Tab key="#about" title="About" href="/#about" />
-        <Tab key="#project" title="Projects" href="#project" />
-        <Tab key="#skills" title="Skills" href="#skills"/>
-        <Tab key="#experinece" title="Experience" href="#experinece" />
-        <Tab key="#home" title="Contact" href="#home" />
-      </Tabs>
+    <div className="flex flex-wrap items-center justify-center sticky top-0  z-50">
+      <div className='flex gap-4 mt-4 bg-[#030712bf]  px-2 py-2 rounded-2xl shadow-md flex-wrap justify-center'>
+        {["home", "about", "projects", "experience", "contact"].map((el, i) => {
+          return (
+            <Link key={i + 1} onClick={()=> setNavigatedTab(`#${el}`)} href={`#${el}`}><div className={`${`#${el}` === navigatedTab ? 'bg-[#221818] text-white' : 'text-white'} bg-[#151921]} px-4 py-2 rounded-2xl capitalize`}>{el}</div></Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
