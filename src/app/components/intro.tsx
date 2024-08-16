@@ -1,10 +1,13 @@
-import { Avatar, Button } from "@nextui-org/react";
-import { MdFileDownload } from "react-icons/md";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Avatar, Button } from '@nextui-org/react'
+import { MdFileDownload } from 'react-icons/md'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const Intro = () => {
   return (
-    <div className="flex flex-col items-center justify-center pb-14 pt-32 gap-5" id="home">
+    <div
+      className="flex flex-col items-center justify-center pb-14 pt-32 gap-5"
+      id="home"
+    >
       <Avatar
         isBordered
         color="default"
@@ -19,23 +22,39 @@ const Intro = () => {
         </p>
       </div>
       <div className="flex gap-4">
+        <a href="MIDHUN.pdf" download="MIDHUN.pdf">
+          <Button
+            color="primary"
+            variant="faded"
+            radius="full"
+            className="p-2 px-6"
+          >
+            Download CV <MdFileDownload />
+          </Button>
+        </a>
         <Button
-          color="primary"
-          variant="faded"
+          isIconOnly
           radius="full"
-          className="p-2 px-6"
+          variant="faded"
+          aria-label="LinkedIn"
+          onClick={() =>
+            window.open('https://www.linkedin.com/in/midhun-k-030131208/')
+          }
         >
-          Download CV <MdFileDownload />
-        </Button>
-        <Button isIconOnly radius="full" variant="faded" aria-label="LinkedIn" onClick={() => window.open("https://www.linkedin.com/in/midhun-k-030131208/")}>
           <FaLinkedin />
         </Button>
-        <Button isIconOnly radius="full" variant="faded" aria-label="Github" onClick={() => window.open("https://github.com/midhunk7228")}>
+        <Button
+          isIconOnly
+          radius="full"
+          variant="faded"
+          aria-label="Github"
+          onClick={() => window.open('https://github.com/midhunk7228')}
+        >
           <FaGithub />
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro
