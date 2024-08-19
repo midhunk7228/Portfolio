@@ -1,4 +1,4 @@
-import { Avatar, Button } from '@nextui-org/react'
+import { Avatar, Button, Image } from '@nextui-org/react'
 import { MdFileDownload } from 'react-icons/md'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
@@ -12,7 +12,8 @@ const Intro = () => {
         isBordered
         color="default"
         className="w-24 h-24"
-        src="https://media.licdn.com/dms/image/D5603AQEj95Zc5iYckA/profile-displayphoto-shrink_800_800/0/1712234035584?e=1728518400&v=beta&t=CyV-t_XzP10262lLY3hEtlDON2RMQKMv91dGo4u8_mA"
+        src="./avatar.jpeg"
+        alt="Avatar"
       />
       <h1 className="text-4xl font-bold">Hello, I&apos;m Midhun</h1>
       <div className="flex items-center justify-center w-2/3">
