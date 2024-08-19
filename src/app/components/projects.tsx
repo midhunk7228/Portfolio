@@ -6,7 +6,7 @@ const Projects = () => {
       <h1 className="text-4xl font-bold pb-6">My Projects</h1>
       {[1, 2, 3].map((e, i) => {
         return (
-          <div className="w-1/3" key={i + 1}>
+          <div className="w-1/3 max-sm:w-3/4" key={i + 1}>
             <Card className="pt-4 group">
               <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <p className="text-tiny uppercase font-bold">Daily Mix</p>
